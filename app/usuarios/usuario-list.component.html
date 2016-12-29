@@ -1,0 +1,10 @@
+<vaadin-grid #grid [items]="usuarios" (selected-items-changed)="editar(grid)">
+  <table>
+    <colgroup>
+      <col name="nome"/>
+      <col name="login"/>
+    </colgroup>
+  </table>
+</vaadin-grid>
+
+<paper-fab icon="add" title="Novo Usuário" class="blue" (click)="novo()"></paper-fab>

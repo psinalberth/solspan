@@ -1,0 +1,15 @@
+a {
+	text-decoration: none;
+	color: #0288d1;
+}
+
+a:hover {
+	color: #343842;
+}
+
+.blue {
+	background: #0288d1;
+	position: fixed;
+        right: 25px;
+        bottom: 30px;
+}

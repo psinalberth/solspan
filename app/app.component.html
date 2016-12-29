@@ -1,0 +1,69 @@
+<paper-drawer-panel>
+  <paper-header-panel drawer>
+    <paper-toolbar>
+      <a href=""><span class="title">SolSpAn</span></a>
+    </paper-toolbar>
+    <div>
+      <paper-menu class="list">
+        <paper-item>
+            <a [routerLink]="['/solicitacoes']">
+              <paper-icon-item>
+                <iron-icon icon="vaadin-icons:lock" item-icon></iron-icon>
+                Segurança
+              </paper-icon-item>
+            </a> 
+        </paper-item>
+        <paper-item>
+            <paper-icon-item>
+              <iron-icon icon="vaadin-icons:chat" item-icon></iron-icon>
+              Fóruns de Discussão
+            </paper-icon-item>
+        </paper-item>
+        <paper-item>
+            <a [routerLink]="['/solicitacoes']">
+              <paper-icon-item>
+                <iron-icon icon="vaadin-icons:pin-post" item-icon></iron-icon>
+                Solicitações
+              </paper-icon-item>
+            </a> 
+        </paper-item>
+        <paper-item>
+            <paper-icon-item>
+              <iron-icon icon="vaadin-icons:cog-o" item-icon></iron-icon>
+              Configurações
+            </paper-icon-item>
+        </paper-item>
+        <paper-item>
+            <a [routerLink]="['/usuarios']">
+              <paper-icon-item>
+                <iron-icon icon="vaadin-icons:users" item-icon></iron-icon>
+                Usuários
+              </paper-icon-item>
+            </a>
+        </paper-item>
+        <paper-item>Item 2</paper-item>
+        <paper-item>Item 2</paper-item>
+      </paper-menu>
+    </div>
+  </paper-header-panel>
+  <paper-header-panel main>
+    <paper-toolbar>
+      <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+    </paper-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </paper-header-panel>
+</paper-drawer-panel>
+
+<paper-dialog id="modal" modal opened>
+
+  <form is="iron-form" method="get" action="/" id="submitOptions">
+      <paper-input name="name" label="Login" required></paper-input>
+      <paper-input name="name" label="Senha" type="password" required></paper-input>
+      
+      <paper-button dialog-confirm autofocus>Entrar</paper-button>
+      <paper-button raised onclick="_reset(event)">Limpar</paper-button>
+  </form>
+
+</paper-dialog>

@@ -1,0 +1,9 @@
+<div class="content">
+	<usuario-list #list (editarUsuario)="usuarioEditor.usuario=$event; dialog.open();"  (novoUsuario)="usuarioEditor.usuario=$event; dialog.open(); usuarioEditor.titulo = 'Editar'"></usuario-list>
+	
+</div>
+
+<paper-dialog #dialog modal>
+	<usuario-form #usuarioEditor (closeEvent)="dialog.close()"></usuario-form>
+</paper-dialog>
+

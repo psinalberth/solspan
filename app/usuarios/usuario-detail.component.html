@@ -1,0 +1,17 @@
+<div class="main-layout">
+  <h2>{{titulo}} Usuário</h2>
+  <paper-icon-button icon="close" (click)="close()"></paper-icon-button>
+</div>
+
+<form #usuarioForm="ngForm" (ngSubmit)="save()">
+	<div class="form">
+		<paper-input name="nome" label="Nome" required [(ngModel)]="usuario.nome"></paper-input>
+		<paper-input name="login" label="Login" required [(ngModel)]="usuario.login"></paper-input>
+		<paper-input name="senha" label="Senha" type="password" required [(ngModel)]="usuario.senha"></paper-input>
+	</div>
+	
+	<div class="buttons-layout">
+		<paper-button raised (click)="usuarioForm.ngSubmit.emit(usuarioForm)">Save</paper-button>
+  		<paper-button (click)="close()">Cancel</paper-button>
+	</div>
+</form>
