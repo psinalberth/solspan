@@ -5,6 +5,14 @@
     </paper-toolbar>
     <div>
       <paper-menu class="list">
+         <paper-item>
+            <a [routerLink]="['/perfis']">
+              <paper-icon-item>
+                <iron-icon icon="vaadin-icons:specialist" item-icon></iron-icon>
+                Perfis
+              </paper-icon-item>
+            </a> 
+        </paper-item>
         <paper-item>
             <a [routerLink]="['/solicitacoes']">
               <paper-icon-item>

@@ -45,6 +45,7 @@ import {perfilRouting} from './perfis/perfil.routing';
     PolymerElement('paper-toolbar'),
     PolymerElement('paper-dialog')
   ],
+  exports: [],
   providers: [
     UsuarioService,
     appRoutingProviders

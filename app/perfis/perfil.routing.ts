@@ -1,12 +1,10 @@
 import {Routes, RouterModule} from '@angular/router';
 
-import {PerfilListComponent} from './perfil-list.component';
-import {PerfilDetailComponent} from './perfil-detail.component';
+import {PerfilOverviewComponent} from './perfil-overview.component';
 
 const perfilRoutes: Routes = [
 
-	{path: 'perfis', component: PerfilListComponent, pathMatch: 'full'},
-	{path: 'perfis/add', component: PerfilDetailComponent}
+	{path: 'perfis', component: PerfilOverviewComponent, pathMatch: 'full'}
 ];
 
 export const perfilRouting = RouterModule.forChild(perfilRoutes);

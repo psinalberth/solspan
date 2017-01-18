@@ -33,6 +33,7 @@
     "paper-item": "PolymerElements/paper-item#^1.2.1",
     "vaadin-icons": "^2.0.0",
     "paper-fab": "PolymerElements/paper-fab#^1.2.1",
-    "webcomponentsjs": "^0.7.23"
+    "webcomponentsjs": "^0.7.23",
+    "paper-dialog-scrollable": "PolymerElements/paper-dialog-scrollable#^1.1.5"
   }
 }

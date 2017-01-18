@@ -1,1 +1,20 @@
-<h2>Profile Details</h2>
+<div class="layout horizontal">
+	<div class="flex">
+		<h2>Editar Perfil</h2>
+	</div>
+		<span><paper-icon-button icon="close" (click)="close()"></paper-icon-button></span>
+</div>
+
+<form is="iron-form" #perfilForm="ngForm" (ngSubmit)="save()" class="layout vertical">
+	<div class="layout-vertical">
+		<paper-input name="nome" label="Nome" required [(ngModel)]="perfil.nome" class="flex"></paper-input>
+		<paper-input name="descricao" label="Descrição" required [(ngModel)]="perfil.descricao"></paper-input>
+	</div>
+		
+	<div class="layout horizontal">
+		<div class="flex">
+			<paper-button raised (click)="perfilForm.ngSubmit.emit(perfilForm)">Save</paper-button>
+		</div>
+  		<paper-button (click)="close()">Cancel</paper-button>
+	</div>
+</form>

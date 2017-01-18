@@ -3,7 +3,7 @@
   <paper-icon-button icon="close" (click)="close()"></paper-icon-button>
 </div>
 
-<form #usuarioForm="ngForm" (ngSubmit)="save()">
+<form is="iron-form" #usuarioForm="ngForm" (ngSubmit)="save()">
 	<div class="form">
 		<paper-input name="nome" label="Nome" required [(ngModel)]="usuario.nome"></paper-input>
 		<paper-input name="login" label="Login" required [(ngModel)]="usuario.login"></paper-input>

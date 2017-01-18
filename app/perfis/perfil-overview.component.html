@@ -1,0 +1,8 @@
+<div class="content">
+	<perfil-list #list (editarPerfil)="perfilEditor.usuario=$event; dialog.open();"  (novoPerfil)="perfilEditor.usuario=$event; dialog.open(); perfilEditor.titulo = 'Editar'"></perfil-list>	
+</div>
+
+<paper-dialog #dialog modal>
+	<perfil-form #perfilEditor (closeEvent)="dialog.close()"></perfil-form>
+</paper-dialog>
+

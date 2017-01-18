@@ -1,1 +1,10 @@
-<h2>List of Profiles</h2>
+<vaadin-grid #grid [items]="perfis" (selected-items-changed)="editar(grid)">
+  <table>
+    <colgroup>
+      <col name="nome"/>
+      <col name="descricao"/>
+    </colgroup>
+  </table>
+</vaadin-grid>
+
+<paper-fab icon="add" title="Novo Perfil" class="blue" (click)="novo()"></paper-fab>
